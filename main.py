@@ -27,3 +27,6 @@ def predict_species(data: IrisInput):
     class_names = ["setosa", "versicolor", "virginica"]
     return {"class": class_names[prediction], "confidence": round(float(np.max(probs)), 3)}
 
+@app.get("/")
+def read_root():
+    return {"message": "Iris API is live!"}
