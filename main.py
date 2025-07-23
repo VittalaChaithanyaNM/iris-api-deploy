@@ -28,5 +28,7 @@ def predict_species(data: IrisInput):
     return {"class": class_names[prediction], "confidence": round(float(np.max(probs)), 3)}
 
 @app.get("/")
+def home():
+    return {"message": "Welcome to the Iris API! Visit /docs to explore."}
 def read_root():
     return {"message": "Iris API is live!"}
