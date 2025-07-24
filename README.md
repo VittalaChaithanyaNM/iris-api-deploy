@@ -21,10 +21,13 @@ Tech Stack
 - Uvicorn
 - Docker
 
+Live API Demo
+
+🔗 [https://iris-api-deploy.onrender.com/docs](https://iris-api-deploy.onrender.com/docs)  
+→ Swagger UI for testing endpoints
 
 
 Project Structure:
-
 ml-k8s-deploy/
 │
 ├── app/
@@ -34,3 +37,21 @@ ml-k8s-deploy/
 │
 ├── requirements.txt # Dependencies
 └── README.md # You're here
+
+ Setup Instructions
+1. Clone the repository
+  git clone https://github.com/VittalaChaithanyaNM/iris-api-deploy.git
+  cd iris-api-deploy
+
+2.Create a virtual environemet to run this clones repo
+  python -m venv venv
+  source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+3. Install the dependecies
+   pip install -r requirements.txt
+
+4.Run the server locally
+  uvicorn main:app --reload
+Visit http://127.0.0.1:8000/docs to open the Swagger UI and test the API locally.
+
+
